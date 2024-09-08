@@ -10,14 +10,14 @@ public class BubbleSort
         System.out.println();
 
         System.out.println("After sorting");
-        bubbleSort(ar);
+        bubbleDownSort(ar);
         for(int i =0;i< ar.length;i++)
         {
             System.out.print(ar[i]+" ");
         }
     }
 
-    public static void bubbleSort(int[] ar)
+    public static void bubbleUpSort(int[] ar)
     {
         for(int i=0;i< ar.length;i++)
         {
@@ -28,6 +28,22 @@ public class BubbleSort
                     int temp=ar[i];
                     ar[i]=ar[j];
                     ar[j]=temp;
+                }
+            }
+        }
+    }
+
+    public static void bubbleDownSort(int[] ar)
+    {
+        for(int i=0;i<ar.length;i++)
+        {
+            for(int j=0;j<ar.length-1-i;j++)
+            {
+                if(ar[j]>ar[j+1])
+                {
+                    int temp=ar[j];
+                    ar[j]=ar[j+1];
+                    ar[j+1]=temp;
                 }
             }
         }
