@@ -31,7 +31,7 @@ public class MergeSort
 
     public static void merge(int[] ar,int left,int right,int mid)
     {
-        int n1=mid-left+1;
+        int n1=(mid-left)+1;
         int n2=right-mid;
 
         int[] leftArr=new int[n1];
