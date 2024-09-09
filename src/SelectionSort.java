@@ -20,17 +20,15 @@ public class SelectionSort
 
     public static void selectionSort(int[] ar)
     {
-        int temp=0;
-        int minIndex=0;
         for(int i=0;i< ar.length-1;i++)
         {
-            minIndex=i;
+            int minIndex=i;
             for(int j=i+1;j< ar.length;j++)
             {
                 if(ar[minIndex]>ar[j])
                     minIndex=j;
             }
-            temp=ar[minIndex];
+            int temp=ar[minIndex];
             ar[minIndex]=ar[i];
             ar[i]=temp;
         }
