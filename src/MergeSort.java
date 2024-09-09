@@ -34,41 +34,41 @@ public class MergeSort
         int n1=mid-left+1;
         int n2=right-mid;
 
-        int[] lArr=new int[n1];
-        int[] rArr=new int[n2];
+        int[] leftArr=new int[n1];
+        int[] rightArr =new int[n2];
 
         for(int i=0;i<n1;i++)
         {
-            lArr[i]=ar[left+i];
+            leftArr[i]=ar[left+i];
         }
 
         for(int j=0;j<n2;j++)
         {
-            rArr[j]=ar[mid+1+j];
+            rightArr[j]=ar[mid+1+j];
         }
 
         int i=0,j=0,k=left;
 
-        while(i<lArr.length&&j<rArr.length)
+        while(i<leftArr.length&&j< rightArr.length)
         {
-            if(lArr[i]<=rArr[j])
+            if(leftArr[i]<= rightArr[j])
             {
-                ar[k++]=lArr[i++];
+                ar[k++]=leftArr[i++];
             }
-            else if(rArr[j]<lArr[i])
+            else if(rightArr[j]<leftArr[i])
             {
-                ar[k++]=rArr[j++];
+                ar[k++]= rightArr[j++];
             }
         }
 
-        while(i<lArr.length)
+        while(i<leftArr.length)
         {
-            ar[k++]=lArr[i++];
+            ar[k++]=leftArr[i++];
         }
 
-        while(j<rArr.length)
+        while(j< rightArr.length)
         {
-            ar[k++]=rArr[j++];
+            ar[k++]= rightArr[j++];
         }
     }
 }
