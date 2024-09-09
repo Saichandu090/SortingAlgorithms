@@ -1,7 +1,7 @@
 public class InsertionSort
 {
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
         int[] ar={54,34,23,87,67,45,12,9};
         System.out.println("Before sorting");
         for(int i =0;i< ar.length;i++)
